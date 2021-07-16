@@ -43,6 +43,8 @@ const sortNames = (arr) => {
     }
   });
   return newArr;
+  // let newArr = arr.sort ( (a,b) => a < b);
+  // return newArr;
   // Solution code here...
 };
 
@@ -55,6 +57,18 @@ HINT: Beware... JS default is "Lexical" ordering.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbers = (arr) => {
+  let newArr = arr.sort ( (a,b) => a - b);
+  return newArr;
+
+  // let newArr = [];
+  // arr.sort( (a,b) => {
+  //   if (a > b) {
+  //     newArr.push(a);
+  //   } else {
+  //     newArr.push(b);
+  //   }
+  // });
+  // return newArr;
   // Solution code here...
 };
 
@@ -67,6 +81,8 @@ HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
+  let newArr = arr.sort ( (a,b) => b - a);
+  return newArr;
   // Solution code here...
 };
 
@@ -81,6 +97,8 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
+  let newArr = arr.sort ( (a,b) => a.toUpperCase() > b.toLowerCase() ? 1 : -1);
+  return newArr;
   // Solution code here...
 };
 
@@ -99,6 +117,8 @@ Here is an example of the input:
 
 const sortByPrice = (arr) => {
   // Solution code here...
+  let newArr = arr.sort ( (firstItem, secondItem) => firstItem.price - secondItem.price);
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
