@@ -25,9 +25,12 @@ let starWarsPeople = [
 ];
 
 const sortStarWarsCharacters = (starWarsArr) => {
-  starWarsArr.sort ( (a,b))
+  starWarsArr.sort ( (a,b) => {
+    return a < b;
+  });
+  return newArr;
   // Solution code here...
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -36,6 +39,8 @@ Write a function named removeThree that takes an index and an array. The functio
 ------------------------------------------------------------------------------------------------ */
 
 const removeThree = (idx, arr) => {
+  arr.splice(idx,3);
+  return arr;
   // Solution code here...
 };
 
@@ -46,6 +51,7 @@ Write a function named joinArray that takes an array and joins all of the elemen
 ------------------------------------------------------------------------------------------------ */
 
 const joinArray = (arr) => {
+  return arr.join(' ');
   // Solution code here...
 };
 
@@ -78,6 +84,8 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here...
+  let newArr = arr.split('');
+  return newArr;
 };
 
 
