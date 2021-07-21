@@ -146,6 +146,11 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
+  let newString = str.split('');
+  let newArr = newString.reduce( (acc, str) => {
+    return str + acc;
+  },'');
+  return newArr;
   // Solution code here...
 };
 
