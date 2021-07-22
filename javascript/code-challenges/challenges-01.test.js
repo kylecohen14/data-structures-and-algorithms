@@ -10,13 +10,10 @@ Use `forEach` to loop over the input array and work with each value.  Push the n
 
 const addOne = (arr) => {
   // Solution code here...
-  const newArr = [];
-  arr.forEach((value, index) => {
-    // let newNum = value + 1
-    newArr.push(value + 1);
-  });
+  let newArr = [];
+  arr.forEach(element => newArr.push(element + 1));
   return newArr;
-}
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -91,10 +88,15 @@ Return the modified array.
 
 const addValues = (arr, value) => {
   // Solution code here...
+  arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
+  for (let i = 0; i < times; i++) {
+    callback(arr, num);
+  }
+  return(arr);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -116,7 +118,15 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
+  let list = []
+  availableItems.forEach(element => {
+    if (element.available === true) {
+      list.push(element.name);
+      return;
+    }
+  });
   // Solution code here...
+  return(list);
 };
 
 /* ------------------------------------------------------------------------------------------------
