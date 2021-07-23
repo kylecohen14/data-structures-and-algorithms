@@ -22,7 +22,11 @@ function lower(str) {
 }
 
 const updateAnimal = (arr, callback) => {
+  let newArr = arr.map( (value, idx) => callback(value))
+  return newArr;
   // Solution code here...
+
+  // GO BACK AND REDO!!!!!!!!!!!!!!!!!!
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -97,7 +101,7 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
-  let newArr = arr.sort ( (a,b) => a.toUpperCase() > b.toLowerCase() ? 1 : -1);
+  let newArr = arr.sort();
   return newArr;
   // Solution code here...
 };
