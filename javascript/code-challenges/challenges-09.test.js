@@ -150,9 +150,9 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  return(Object.values(arr.character).includes(value));
-  // Solution code here...
-if 
+//   return(Object.values(arr.character).includes(value));
+//   // Solution code here...
+// if 
 };
 
 /* ------------------------------------------------------------------------------------------------
