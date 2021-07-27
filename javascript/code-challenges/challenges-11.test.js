@@ -20,6 +20,11 @@ Becomes:
 
 function transformToLis(obj){
   // Solution code here...
+  let newArr = [];
+  for (let [key, value] of Object.entries(obj)){
+    newArr.push('<li>' + key + ': ' + value + '</li>');
+  }
+  return newArr;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -34,6 +39,14 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
   // Solution code here...
+  let count = 0;
+  input.map(item => item.map(num => {
+    if(num === target) {
+      count++;
+    }
+    return count;
+  }))
+  return count;
 };
 
 /* ------------------------------------------------------------------------------------------------
