@@ -22,7 +22,6 @@ If the PIN is four numerical digits long, return true. Otherwise, return false.
 
 const validatePin = (pin) => {
   return /^(\d{4})$/.test(pin);
-
   // Solution code here...
   // let validator = /([0-9]{4})/g; 
   // return (validator.test(pin));
